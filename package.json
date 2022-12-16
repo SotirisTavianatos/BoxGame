@@ -1,0 +1,40 @@
+{
+  "name": "iwg-fe-assignment",
+  "version": "1.0.0",
+  "description": "IWG Assignment",
+  "author": "CamelotLS <iwg@camelotls.com>",
+  "main": "src/index.js",
+  "scripts": {
+    "serve": "webpack serve --open -c webpack.dev.js --mode=development --env title=\"IwgFeAssignment\"",
+    "build:dev": "npm run prebuild && webpack -c webpack.dev.js --mode=development --env title=\"IwgFeAssignment\"",
+    "build:prod": "npm run prebuild && webpack -c webpack.prod.js --mode=production --env title=\"IwgFeAssignment\"",
+    "clean": "node node_modules/rimraf/bin dist",
+    "lint": "eslint src/ --ext .js --quiet --fix",
+    "prebuild": "npm run clean && npm run lint"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "1.6.2",
+    "gsap": "^3.10.4",
+    "pixi.js-legacy": "6.3.2",
+    "webfontloader": "1.6.28"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.16.0",
+    "@babel/core": "7.16.0",
+    "@babel/plugin-proposal-class-properties": "7.16.0",
+    "@babel/plugin-transform-modules-commonjs": "7.16.0",
+    "@babel/preset-env": "7.16.4",
+    "@babel/register": "7.16.0",
+    "babel-loader": "8.2.3",
+    "css-loader": "6.5.1",
+    "eslint": "8.3.0",
+    "eslint-plugin-import": "2.25.3",
+    "html-webpack-plugin": "5.5.0",
+    "rimraf": "3.0.2",
+    "style-loader": "3.3.1",
+    "webpack": "5.64.0",
+    "webpack-cli": "4.9.1",
+    "webpack-dev-server": "^4.9.3",
+    "webpack-merge": "5.8.0"
+  }
+}

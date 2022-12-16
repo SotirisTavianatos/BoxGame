@@ -1,0 +1,40 @@
+* {
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	/* hides scrollbars on Edge and IE */
+	overflow: hidden;
+}
+
+body {
+	width:100vw;
+	position: relative;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background-color: #e0e0e0;
+}
+
+#game-canvas {
+	user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-drag: none;
+	-webkit-transform: translateZ(0);
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: auto;
+	max-width: 100%;
+	max-height: 100%;
+	z-index: 2;
+}
